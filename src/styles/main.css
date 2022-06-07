@@ -34,3 +34,18 @@ h1,h2,h3,h4,h5,h6 {
     background-color: darksalmon;
 }
 
+body {
+    background-color:lemonchiffon;
+}
+
+.plant_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.plant {
+    display: flex;
+    margin: 2em;
+    font-size: 20px;
+    font-weight: bolder;
+}

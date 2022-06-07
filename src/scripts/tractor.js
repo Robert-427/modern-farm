@@ -14,19 +14,28 @@ export const plantSeeds = (yearlyPlan) => {
     The plan is an array. It contains 4 arrays representing the rows in the field to be plants. 
     Figure out how to iterate both the parent array and the child arrays*/
     for (const row of yearlyPlan) {
+        //itterate through array of arrays
         for (const plant of row) {
-            if (plant.type === "Asparagus") {
-                field.push(createAsparagus())
-            } else if (plant.type === "Potato") {
-                field.push(createPotato)
-            } else if (plant.type === "Soybean") {
-                field.push(createSoybean)
-            } else if (plant.type === "Sunflower") {
-                field.push(createSunflower)
-            } else if (plant.type === "Wheat") {
-                field.push(createWheat)
-            } else if (plant.type === "Corn") {
-                field.push(createCorn)
+            //itterate through array of plants
+            if (plant === "Asparagus") {
+                //invoke correct seed function for plant type
+                let asparagusSeed = createAsparagus()
+                addPlant(asparagusSeed)
+            } else if (plant === "Potato") {
+                let potatoSeed = createPotato()
+                addPlant(potatoSeed)
+            } else if (plant === "Soybean") {
+                let soybeanSeed = createSoybean()
+                addPlant(soybeanSeed)
+            } else if (plant === "Sunflower") {
+                let sunflowerSeed = createSunflower()
+                addPlant(sunflowerSeed)
+            } else if (plant === "Wheat") {
+                let wheatSeed = createWheat()
+                addPlant(wheatSeed)
+            } else if (plant === "Corn") {
+                let cornSeed = createCorn()
+                addPlant(cornSeed)
             }
         }
     }
